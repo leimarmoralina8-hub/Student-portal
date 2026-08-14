@@ -18,7 +18,6 @@
             color: #333;
         }
 
-        /* LOGIN */
         .login-container {
             width: 100%;
             height: 100vh;
@@ -78,7 +77,6 @@
             color: red;
         }
 
-        /* MAIN WEBSITE */
         .portal {
             display: none;
         }
@@ -106,7 +104,6 @@
             min-height: calc(100vh - 70px);
         }
 
-        /* SIDEBAR */
         .sidebar {
             width: 220px;
             background: white;
@@ -127,7 +124,6 @@
             color: #2563eb;
         }
 
-        /* CONTENT */
         .content {
             flex: 1;
             padding: 30px;
@@ -153,7 +149,7 @@
             margin-bottom: 8px;
         }
 
-        /* CARDS */
+
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -209,7 +205,7 @@
             font-weight: bold;
         }
 
-        /* PROFILE */
+
         .profile {
             background: white;
             padding: 25px;
@@ -222,7 +218,6 @@
             border-bottom: 1px solid #eee;
         }
 
-        /* FEEDBACK */
         .feedback {
             background: white;
             padding: 25px;
@@ -251,7 +246,6 @@
             font-weight: bold;
         }
 
-        /* MOBILE */
         @media (max-width: 768px) {
             .cards {
                 grid-template-columns: 1fr;
@@ -270,7 +264,6 @@
 
 <body>
 
-<!-- LOGIN PAGE -->
 <div class="login-container" id="loginPage">
 
     <div class="login-box">
@@ -292,43 +285,40 @@
 <div class="portal" id="portal">
 
     <header>
-        <h2>🎓 Student Portal</h2>
+        <h2> Student Portal</h2>
 
         <button class="logout" onclick="logout()">Logout</button>
     </header>
 
     <div class="layout">
 
-        <!-- SIDEBAR -->
         <aside class="sidebar">
 
             <button onclick="showPage('home')">
-                🏠 Home
+              
             </button>
 
             <button onclick="showPage('grades')">
-                📊 Grades
+               
             </button>
 
             <button onclick="showPage('attendance')">
-                📅 Attendance
+         
             </button>
 
             <button onclick="showPage('profile')">
-                👤 Profile
+     
             </button>
 
             <button onclick="showPage('feedback')">
-                💬 Feedback
+   
             </button>
 
         </aside>
 
 
-        <!-- CONTENT -->
         <main class="content">
 
-            <!-- HOME -->
             <section id="home" class="page active">
 
                 <div class="welcome">
@@ -358,7 +348,6 @@
             </section>
 
 
-            <!-- GRADES -->
             <section id="grades" class="page">
 
                 <h1>📊 My Grades</h1>
@@ -406,7 +395,6 @@
             </section>
 
 
-            <!-- ATTENDANCE -->
             <section id="attendance" class="page">
 
                 <h1>📅 Attendance</h1>
@@ -448,7 +436,6 @@
             </section>
 
 
-            <!-- PROFILE -->
             <section id="profile" class="page">
 
                 <h1>👤 Student Profile</h1>
@@ -469,8 +456,6 @@
 
             </section>
 
-
-            <!-- FEEDBACK -->
             <section id="feedback" class="page">
 
                 <h1>💬 Student Feedback</h1>
@@ -535,7 +520,6 @@
     }
 
 
-    // NAVIGATION
     function showPage(pageName) {
 
         let pages = document.querySelectorAll(".page");
@@ -548,8 +532,6 @@
 
     }
 
-
-    // FEEDBACK
     function submitFeedback() {
 
         let feedback = document.getElementById("feedbackText").value;
